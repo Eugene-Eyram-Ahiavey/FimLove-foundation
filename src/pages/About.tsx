@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async'
 import { Eye, Target, Heart, Quote } from 'lucide-react'
-import Hafs from "../assets/Dr-Hafisah.jpg";
 import Kobe from "../assets/Kobe Bean Bryant  Legend.jpeg"
 
 
