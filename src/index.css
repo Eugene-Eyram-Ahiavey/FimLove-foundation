@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-body text-gray-900 bg-white leading-relaxed text-base;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold leading-tight text-gray-900;
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+  }
+
+  p {
+    @apply text-gray-600 leading-7;
+  }
+
+  a {
+    @apply text-primary no-underline transition-colors duration-150;
+  }
+
+  a:hover {
+    @apply text-primary-700;
+  }
+
+  img {
+    @apply max-w-full h-auto block;
+  }
+
+  ul {
+    @apply list-none;
+  }
+
+  button {
+    @apply cursor-pointer border-none bg-transparent font-[inherit];
+  }
+
+  input,
+  textarea,
+  select {
+    @apply font-[inherit] text-[inherit];
+  }
+}
+
+@layer components {
+
+  /* Page hero sections */
+  .page-hero {
+    @apply relative py-32 md:py-40 flex items-center justify-center text-center bg-cover bg-center;
+  }
+
+  .page-hero-overlay {
+    @apply absolute inset-0 bg-gradient-to-b from-gray-900/70 to-gray-900/80;
+  }
+
+  .page-hero-content {
+    @apply relative z-10;
+  }
+
+  .page-hero-content h1 {
+    @apply text-white mb-4;
+  }
+
+  .page-hero-content p {
+    @apply text-white/70 text-lg max-w-xl mx-auto;
+  }
+
+  /* Section label */
+  .section-label {
+    @apply inline-block text-primary font-semibold text-sm uppercase tracking-widest mb-2;
+  }
+
+  /* Animations with delays */
+  .delay-1 {
+    animation-delay: 0.1s;
+  }
+
+  .delay-2 {
+    animation-delay: 0.2s;
+  }
+
+  .delay-3 {
+    animation-delay: 0.3s;
+  }
+
+  .delay-4 {
+    animation-delay: 0.4s;
+  }
+}
