@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Users, Heart, Globe, TrendingUp } from 'lucide-react'
 import { defaultPosts } from '../data/siteData'
+import upcomingProgram from "../assets/images/donation.jpeg"
 
 const stats = [
     { icon: <Users size={28} />, value: '15,000+', label: 'Lives Impacted' },
@@ -21,29 +22,67 @@ export default function Home() {
             </Helmet>
 
             {/* Hero */}
-            <section className="relative min-h-screen flex items-center bg-gradient-to-br from-[#1a0a0a] via-[#2d1010] to-[#3d1515] overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[url('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1600&q=80')] before:bg-cover before:bg-center before:opacity-25">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(220,38,38,0.15)_0%,transparent_60%)]" />
-                <div className="relative z-[2] max-w-container mx-auto px-6 py-32 pb-24 max-w-[750px]">
-                    <span className="inline-block bg-white/10 backdrop-blur-sm border border-white/15 px-5 py-2 rounded-full text-sm text-white/90 mb-8 opacity-0 animate-fade-in-up">
-                        🤝 Together We Make a Difference
-                    </span>
-                    <h1 className="text-white text-[clamp(2.5rem,6vw,4rem)] font-extrabold leading-[1.1] mb-8 opacity-0 animate-fade-in-up delay-1">
-                        Empowering Communities,<br />
-                        <span className="bg-gradient-to-br from-primary-400 to-primary-300 bg-clip-text text-transparent">Transforming Lives</span>
-                    </h1>
-                    <p className="text-white/75 text-lg max-w-[560px] leading-7 mb-10 opacity-0 animate-fade-in-up delay-2">
-                        FirmLove Foundation is committed to creating lasting change through
-                        education, healthcare, and sustainable development in underserved communities.
-                    </p>
-                    <div className="flex gap-4 flex-wrap opacity-0 animate-fade-in-up delay-3">
-                        <Link to="/donate" className="inline-flex items-center justify-center gap-2 px-9 py-4 rounded-full font-semibold text-lg bg-primary text-white shadow-[0_4px_14px_rgba(220,38,38,0.35)] hover:bg-primary-700 hover:-translate-y-0.5 transition-all duration-250">
-                            Donate Now <Heart size={18} />
-                        </Link>
-                        <Link to="/about" className="inline-flex items-center justify-center gap-2 px-9 py-4 rounded-full font-semibold text-lg bg-white text-primary shadow-md hover:-translate-y-0.5 hover:shadow-lg transition-all duration-250">
-                            Learn More <ArrowRight size={18} />
-                        </Link>
+            <section className="relative min-h-screen flex items-center bg-[#1a0a0a] overflow-hidden">
+                <video 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline 
+                    className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay pointer-events-none"
+                    src="https://cdn.pixabay.com/video/2021/08/25/86241-592881856_large.mp4"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#1a0a0a]/90 via-[#2d1010]/80 to-[#3d1515]/70" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(220,38,38,0.2)_0%,transparent_60%)]" />
+                
+                <div className="relative z-[2] max-w-container mx-auto px-6 py-32 pb-24 w-full">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                        {/* Left Column - Text Content */}
+                        <div className="max-w-[750px]">
+                            <span className="inline-block bg-white/10 backdrop-blur-sm border border-white/15 px-5 py-2 rounded-full text-sm text-white/90 mb-8 opacity-0 animate-fade-in-up">
+                                🤝 Together We Make a Difference
+                            </span>
+                            <h1 className="text-white text-[clamp(2.5rem,6vw,4rem)] font-extrabold leading-[1.1] mb-8 opacity-0 animate-fade-in-up delay-1">
+                                Empowering Communities,<br />
+                                <span className="bg-gradient-to-br from-primary-400 to-primary-300 bg-clip-text text-transparent">Transforming Lives</span>
+                            </h1>
+                            <p className="text-white/80 text-lg max-w-[560px] leading-7 mb-10 opacity-0 animate-fade-in-up delay-2">
+                                FirmLove Foundation is committed to creating lasting change through
+                                education, healthcare, and sustainable development in underserved communities.
+                            </p>
+                            <div className="flex gap-4 flex-wrap opacity-0 animate-fade-in-up delay-3">
+                                <Link to="/donate" className="inline-flex items-center justify-center gap-2 px-9 py-4 rounded-full font-semibold text-lg bg-primary text-white shadow-[0_4px_14px_rgba(220,38,38,0.35)] hover:bg-primary-700 hover:-translate-y-0.5 transition-all duration-250">
+                                    Donate Now <Heart size={18} />
+                                </Link>
+                                <Link to="/about" className="inline-flex items-center justify-center gap-2 px-9 py-4 rounded-full font-semibold text-lg bg-white/10 text-white border border-white/20 backdrop-blur-sm hover:bg-white/20 hover:-translate-y-0.5 transition-all duration-250">
+                                    Learn More <ArrowRight size={18} />
+                                </Link>
+                            </div>
+                        </div>
+
+                        {/* Right Column - Floating Banner */}
+                        <div className="relative w-full max-w-[460px] mx-auto lg:ml-auto opacity-0 animate-fade-in-up delay-4">
+                            <div className="absolute inset-0 bg-primary/30 blur-3xl rounded-full transform -translate-y-4"></div>
+                            <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 p-2.5 rounded-[2rem] shadow-2xl overflow-hidden group hover:-translate-y-2 transition-transform duration-500">
+                                <div className="absolute top-6 left-6 z-10 bg-primary text-white px-4 py-1.5 rounded-full text-sm font-semibold shadow-[0_4px_14px_rgba(220,38,38,0.35)] animate-pulse">
+                                    Upcoming Program
+                                </div>
+                                <img 
+                                    src={upcomingProgram} 
+                                    alt="Program Flyer Placeholder" 
+                                    className="w-full h-auto aspect-[4/5] object-cover rounded-3xl transition-transform duration-700 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent rounded-[2rem] flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <h3 className="text-white text-2xl font-bold mb-2">Annual Charity Drive</h3>
+                                    <p className="text-white/80 mb-6 line-clamp-2">Join us in providing essential supplies and medical care to rural communities.</p>
+                                    <Link to="/programs" className="inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-semibold text-[0.95rem] bg-primary text-white shadow-md hover:bg-primary-600 transition-colors">
+                                        View Details <ArrowRight size={18} />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
                 <div className="absolute bottom-[-1px] left-0 right-0 z-[2]">
                     <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="block w-full h-auto">
                         <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white" />

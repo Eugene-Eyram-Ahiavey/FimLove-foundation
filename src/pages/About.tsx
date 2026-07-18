@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 import { Eye, Target, Heart, Quote } from 'lucide-react'
-import Kobe from "../assets/Kobe Bean Bryant  Legend.jpeg"
+import founderImage from "../assets/images/Dr-Hafisah.jpg"
 
 
 export default function About() {
@@ -84,7 +84,7 @@ export default function About() {
                     <div className="grid grid-cols-1 md:grid-cols-[350px_1fr] gap-16 items-center">
                         <div>
                             <img
-                                src={Kobe}
+                                src={founderImage}
                                 alt="FirmLove Founder"
                                 className="rounded-2xl shadow-xl w-full h-[420px] object-cover"
                             />
@@ -102,7 +102,7 @@ export default function About() {
                                 I invite you to join us on this journey."
                             </blockquote>
                             <div>
-                                <strong className="text-gray-900 block">Black Mamba</strong>
+                                <strong className="text-gray-900 block">Dr. Hafisah Quansah</strong>
                                 <span className="text-gray-500 text-sm">Founder & Executive Director</span>
                             </div>
                         </div>
