@@ -31,9 +31,9 @@ export default function Contact() {
 
                             <div className="space-y-6 mb-10">
                                 {[
-                                    { icon: <MapPin size={20} />, title: 'Our Office', text: '123 Foundation Street, Lagos, Nigeria' },
-                                    { icon: <Phone size={20} />, title: 'Phone', text: '+234 800 000 0000' },
-                                    { icon: <Mail size={20} />, title: 'Email', text: 'info@firmlove.org' },
+                                    { icon: <MapPin size={20} />, title: 'Our Office', text: 'Accra, Ghana' },
+                                    { icon: <Phone size={20} />, title: 'Phone', text: '+233 53 554 6865 / +233 55 287 9130' },
+                                    { icon: <Mail size={20} />, title: 'Email', text: 'firmlovefoundation@gmail.com' },
                                     { icon: <Clock size={20} />, title: 'Working Hours', text: 'Mon – Fri: 9:00 AM – 5:00 PM' },
                                 ].map((item, i) => (
                                     <div key={i} className="flex gap-4">
@@ -91,7 +91,7 @@ export default function Contact() {
             <section className="w-full leading-[0]">
                 <iframe
                     title="FirmLove Foundation Location"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253682.46312584616!2d3.1191397!3d6.5480357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2s!4v1709000000000"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254054.66444876677!2d-0.3475853245468759!3d5.6025175510650965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9084b2b7a773%3A0xbed14ed8650e2dd3!2sAccra%2C%20Ghana!5e0!3m2!1sen!2s!4v1709000000000"
                     width="100%"
                     height="400"
                     style={{ border: 0 }}

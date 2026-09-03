@@ -52,20 +52,22 @@ export default function Programs() {
                 </div>
             </section>
 
-            <section className="py-24">
-                <div className="max-w-container mx-auto px-6">
-                    <div className="text-center mb-16">
-                        <span className="section-label">Completed Work</span>
-                        <h2 className="mb-4">Past Programs</h2>
-                        <p className="max-w-[600px] mx-auto text-lg">Programs we've successfully completed, leaving lasting impact in communities.</p>
+            {completed.length > 0 && (
+                <section className="py-24">
+                    <div className="max-w-container mx-auto px-6">
+                        <div className="text-center mb-16">
+                            <span className="section-label">Completed Work</span>
+                            <h2 className="mb-4">Past Programs</h2>
+                            <p className="max-w-[600px] mx-auto text-lg">Programs we've successfully completed, leaving lasting impact in communities.</p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {completed.map(program => (
+                                <ProgramCard key={program.id} program={program} badge="Completed" badgeClass="bg-gray-100 text-gray-600" />
+                            ))}
+                        </div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {completed.map(program => (
-                            <ProgramCard key={program.id} program={program} badge="Completed" badgeClass="bg-gray-100 text-gray-600" />
-                        ))}
-                    </div>
-                </div>
-            </section>
+                </section>
+            )}
         </>
     )
 }

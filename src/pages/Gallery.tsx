@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { X } from 'lucide-react'
 import { defaultGallery, type GalleryItem } from '../data/siteData'
 
-const categories = ['all', 'events', 'donations', 'outreach'] as const
+const categories = ['all', 'education', 'healthcare', 'community', 'widows', 'team'] as const
 
 export default function Gallery() {
     const [activeFilter, setActiveFilter] = useState<string>('all')

@@ -29,21 +29,13 @@ export default function About() {
                             <span className="section-label">Our Journey</span>
                             <h2 className="mb-6">The Story Behind FirmLove</h2>
                             <p className="mb-4 text-[1.05rem]">
-                                FirmLove Foundation was born from a simple yet profound belief: that love,
-                                when combined with firm determination, can transform communities. What started
-                                as a small group of passionate individuals providing school supplies to children
-                                has grown into a multi-faceted organization impacting thousands of lives.
+                                Firmlove Foundation is a beacon of hope in a world often shadowed by hardship and indifference. We believe that even when darkness seems to rise, the power of love must remain unyielding. Our foundation exists for one simple yet profound reason: <strong>to show love through action</strong>.
                             </p>
                             <p className="mb-4 text-[1.05rem]">
-                                Over the years, we've expanded our reach from education to healthcare, clean water access,
-                                women's empowerment, and emergency relief. Every program we launch is designed
-                                with input from the communities we serve, ensuring that our work is relevant,
-                                sustainable, and impactful.
+                                Inspired by the mandate in <strong>Matthew 25:35–36</strong>, we recognize that our faith and humanity are best expressed through service. When we feed the hungry, clothe the naked, visit the sick, and support the imprisoned, we are not just providing aid—we are restoring dignity.
                             </p>
                             <p className="text-[1.05rem]">
-                                Today, FirmLove stands as a testament to what collective compassion can achieve.
-                                With a growing network of donors, volunteers, and partners, we continue to push
-                                boundaries and create opportunities for those who need them most.
+                                What began as a response to the immediate needs of the marginalized in Ghana has grown into a lifelong journey of compassion. Whether we are supporting less privileged teenagers with their education or providing a meal to a wanderer, our goal is to ensure that no one feels forgotten. At Firmlove, we don't just speak about empathy; we live it, striving every day to be the hands and feet of love in our communities and beyond.
                             </p>
                         </div>
                         <div>
@@ -62,8 +54,8 @@ export default function About() {
                 <div className="max-w-container mx-auto px-6">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
-                            { icon: <Eye size={32} />, title: 'Our Vision', text: 'A world where every community thrives with access to education, healthcare, and sustainable opportunities — where no one is left behind regardless of their circumstances.' },
-                            { icon: <Target size={32} />, title: 'Our Mission', text: 'To empower underserved communities through targeted programs in education, health, and development, driven by transparency, accountability, and partnership with the people we serve.' },
+                            { icon: <Eye size={32} />, title: 'Our Vision', text: 'Our vision is a world transformed by compassion, where unyielding love prevails over indifference—starting within Ghana and extending across borders to uplift humanity.' },
+                            { icon: <Target size={32} />, title: 'Our Mission', text: 'To restore dignity to the marginalized by providing essential humanitarian aid and compassionate care, while empowering the less privileged through transformative educational opportunities.' },
                             { icon: <Heart size={32} />, title: 'Our Values', text: 'Compassion guides our work. Integrity defines our processes. Collaboration amplifies our impact. Innovation drives our solutions. Sustainability ensures our legacy.' },
                         ].map((card, i) => (
                             <div key={i} className="bg-white p-10 rounded-xl border border-gray-200 text-center transition-all duration-250 hover:shadow-lg hover:-translate-y-1">
@@ -95,11 +87,7 @@ export default function About() {
                             </div>
                             <h2 className="mb-6">Founder's Message</h2>
                             <blockquote className="text-lg text-gray-600 leading-8 italic border-l-4 border-primary pl-6 mb-6">
-                                "When I started FirmLove, I had one vision: to prove that consistent,
-                                compassionate action can change the world — one community at a time.
-                                Every child we educate, every well we build, every family we empower
-                                is proof that this vision is not just a dream, but a living reality.
-                                I invite you to join us on this journey."
+                                "What began as a response to the immediate needs of the marginalized in Ghana has grown into a lifelong journey of compassion. Whether we are supporting less privileged teenagers with their education or providing a meal to a wanderer, our goal is to ensure that no one feels forgotten. I invite you to join us on this journey."
                             </blockquote>
                             <div>
                                 <strong className="text-gray-900 block">Dr. Hafisah Quansah</strong>

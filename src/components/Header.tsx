@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, Heart } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 const navLinks = [
     { path: '/', label: 'Home' },
@@ -31,9 +31,7 @@ export default function Header() {
         <header className={`fixed top-0 left-0 right-0 z-[1000] py-4 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-transparent'}`}>
             <div className="max-w-container mx-auto px-6 flex items-center justify-between">
                 <Link to="/" className="flex items-center gap-2 no-underline text-gray-900 z-[1001]">
-                    <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
-                        <Heart size={24} fill="currentColor" />
-                    </div>
+                    <img src="/src/assets/images/Firmlove.png" alt="FirmLove Foundation Logo" className="h-10 w-auto" />
                     <span className="font-heading text-2xl font-extrabold text-gray-900">
                         Firm<span className="text-primary">Love</span>
                     </span>

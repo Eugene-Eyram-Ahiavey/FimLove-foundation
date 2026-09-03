@@ -55,9 +55,9 @@ export default function Footer() {
                         <h4 className="text-white font-heading font-semibold text-lg mb-5">Contact Us</h4>
                         <ul className="space-y-4">
                             {[
-                                { icon: <MapPin size={16} />, text: '123 Foundation Street, Gbawe, Accra' },
+                                { icon: <MapPin size={16} />, text: 'Gbawe, Accra, Ghana' },
                                 { icon: <Phone size={16} />, text: '+233 55 287 9130' },
-                                { icon: <Mail size={16} />, text: 'info@firmlove.org' },
+                                { icon: <Mail size={16} />, text: 'firmlovefoundation@gmail.com' },
                             ].map((item, i) => (
                                 <li key={i} className="flex items-start gap-3 text-sm text-gray-400">
                                     <span className="text-primary mt-0.5 shrink-0">{item.icon}</span>

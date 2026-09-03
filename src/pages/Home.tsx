@@ -1,24 +1,54 @@
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Users, Heart, Globe, TrendingUp } from 'lucide-react'
-import { defaultPosts } from '../data/siteData'
+import { defaultPosts, defaultPrograms } from '../data/siteData'
 import upcomingProgram from "../assets/images/donation.jpeg"
 
 const stats = [
-    { icon: <Users size={28} />, value: '15,000+', label: 'Lives Impacted' },
-    { icon: <Heart size={28} />, value: '50+', label: 'Programs Completed' },
-    { icon: <Globe size={28} />, value: '25+', label: 'Communities Served' },
-    { icon: <TrendingUp size={28} />, value: '$500K+', label: 'Funds Raised' },
+    { icon: <Heart size={28} />, value: '4', label: 'Core Program Areas' },
+    { icon: <Users size={28} />, value: '500+', label: 'Children Supported' },
+    { icon: <Globe size={28} />, value: '3+', label: 'Communities Reached' },
+    { icon: <TrendingUp size={28} />, value: '100%', label: 'Commitment to Service' },
 ]
 
 export default function Home() {
     const recentPosts = defaultPosts.slice(0, 3)
 
+    const upcomingPrograms = defaultPrograms.filter(p => p.status === 'upcoming')
+    const completedPrograms = defaultPrograms.filter(p => p.status === 'completed')
+
+    let highlightInfo = null;
+    if (upcomingPrograms.length > 0) {
+        highlightInfo = {
+            badge: 'Upcoming Program',
+            title: upcomingPrograms[0].title,
+            desc: upcomingPrograms[0].description,
+            image: upcomingPrograms[0].image,
+            link: '/programs'
+        }
+    } else if (completedPrograms.length > 0) {
+        highlightInfo = {
+            badge: 'Recent Impact',
+            title: completedPrograms[0].title,
+            desc: completedPrograms[0].description,
+            image: completedPrograms[0].image,
+            link: '/programs'
+        }
+    } else {
+        highlightInfo = {
+            badge: 'Make an Impact',
+            title: 'Support Our Mission',
+            desc: 'Your donation helps us provide essential humanitarian aid and educational opportunities to those who need it most.',
+            image: upcomingProgram,
+            link: '/donate'
+        }
+    }
+
     return (
         <>
             <Helmet>
-                <title>FirmLove Foundation — Compassion in Action</title>
-                <meta name="description" content="FirmLove Foundation is dedicated to transforming lives through education, health, and community development programs. Join us in making a difference." />
+                <title>FirmLove Foundation — Spreading Love, Bringing Hope</title>
+                <meta name="description" content="FirmLove Foundation is a beacon of hope, dedicated to restoring dignity to the marginalized by providing essential humanitarian aid and educational opportunities." />
             </Helmet>
 
             {/* Hero */}
@@ -29,7 +59,7 @@ export default function Home() {
                     muted 
                     playsInline 
                     className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay pointer-events-none"
-                    src="https://cdn.pixabay.com/video/2021/08/25/86241-592881856_large.mp4"
+                    src="/videos/hero-bg.mp4"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-[#1a0a0a]/90 via-[#2d1010]/80 to-[#3d1515]/70" />
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(220,38,38,0.2)_0%,transparent_60%)]" />
@@ -39,15 +69,14 @@ export default function Home() {
                         {/* Left Column - Text Content */}
                         <div className="max-w-[750px]">
                             <span className="inline-block bg-white/10 backdrop-blur-sm border border-white/15 px-5 py-2 rounded-full text-sm text-white/90 mb-8 opacity-0 animate-fade-in-up">
-                                🤝 Together We Make a Difference
+                                🤝 Spreading Love, Bringing Hope
                             </span>
                             <h1 className="text-white text-[clamp(2.5rem,6vw,4rem)] font-extrabold leading-[1.1] mb-8 opacity-0 animate-fade-in-up delay-1">
                                 Empowering Communities,<br />
                                 <span className="bg-gradient-to-br from-primary-400 to-primary-300 bg-clip-text text-transparent">Transforming Lives</span>
                             </h1>
                             <p className="text-white/80 text-lg max-w-[560px] leading-7 mb-10 opacity-0 animate-fade-in-up delay-2">
-                                FirmLove Foundation is committed to creating lasting change through
-                                education, healthcare, and sustainable development in underserved communities.
+                                To restore dignity to the marginalized by providing essential humanitarian aid and compassionate care, while empowering the less privileged through transformative educational opportunities.
                             </p>
                             <div className="flex gap-4 flex-wrap opacity-0 animate-fade-in-up delay-3">
                                 <Link to="/donate" className="inline-flex items-center justify-center gap-2 px-9 py-4 rounded-full font-semibold text-lg bg-primary text-white shadow-[0_4px_14px_rgba(220,38,38,0.35)] hover:bg-primary-700 hover:-translate-y-0.5 transition-all duration-250">
@@ -64,17 +93,17 @@ export default function Home() {
                             <div className="absolute inset-0 bg-primary/30 blur-3xl rounded-full transform -translate-y-4"></div>
                             <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 p-2.5 rounded-[2rem] shadow-2xl overflow-hidden group hover:-translate-y-2 transition-transform duration-500">
                                 <div className="absolute top-6 left-6 z-10 bg-primary text-white px-4 py-1.5 rounded-full text-sm font-semibold shadow-[0_4px_14px_rgba(220,38,38,0.35)] animate-pulse">
-                                    Upcoming Program
+                                    {highlightInfo.badge}
                                 </div>
                                 <img 
-                                    src={upcomingProgram} 
-                                    alt="Program Flyer Placeholder" 
-                                    className="w-full h-auto aspect-[4/5] object-cover rounded-3xl transition-transform duration-700 group-hover:scale-105"
+                                    src={highlightInfo.image} 
+                                    alt={highlightInfo.title} 
+                                    className="w-full h-auto aspect-[4/5] object-cover rounded-3xl transition-transform duration-700 group-hover:scale-105 bg-black/20"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent rounded-[2rem] flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <h3 className="text-white text-2xl font-bold mb-2">Annual Charity Drive</h3>
-                                    <p className="text-white/80 mb-6 line-clamp-2">Join us in providing essential supplies and medical care to rural communities.</p>
-                                    <Link to="/programs" className="inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-semibold text-[0.95rem] bg-primary text-white shadow-md hover:bg-primary-600 transition-colors">
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent rounded-[2rem] flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <h3 className="text-white text-2xl font-bold mb-2">{highlightInfo.title}</h3>
+                                    <p className="text-white/90 mb-6 line-clamp-2">{highlightInfo.desc}</p>
+                                    <Link to={highlightInfo.link} className="inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-semibold text-[0.95rem] bg-primary text-white shadow-md hover:bg-primary-600 transition-colors">
                                         View Details <ArrowRight size={18} />
                                     </Link>
                                 </div>
@@ -107,17 +136,12 @@ export default function Home() {
                         </div>
                         <div>
                             <span className="section-label">Who We Are</span>
-                            <h2 className="mb-6">A Foundation Built on Love &amp; Action</h2>
+                            <h2 className="mb-6">To Show Love Through Action</h2>
                             <p className="mb-4 text-[1.05rem]">
-                                Since our founding, FirmLove has been driven by the belief that every person
-                                deserves access to education, healthcare, and opportunity. We work directly
-                                with communities to understand their needs and deliver programs that create
-                                real, measurable impact.
+                                Firmlove Foundation is a beacon of hope in a world often shadowed by hardship and indifference. We believe that even when darkness seems to rise, the power of love must remain unyielding. Our foundation exists for one simple yet profound reason: to show love through action.
                             </p>
                             <p className="mb-4 text-[1.05rem]">
-                                Our approach combines grassroots engagement with strategic partnerships to
-                                ensure sustainability and scalability. Every donation, every volunteer hour,
-                                and every partnership brings us closer to a world where no one is left behind.
+                                Inspired by the mandate in <strong>Matthew 25:35–36</strong>, we recognize that our faith and humanity are best expressed through service. Whether we are supporting less privileged teenagers with their education or providing a meal to a wanderer, our goal is to ensure that no one feels forgotten.
                             </p>
                             <Link to="/about" className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full font-semibold text-[0.95rem] border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-white hover:-translate-y-0.5 transition-all duration-250 mt-4">
                                 Our Story <ArrowRight size={16} />

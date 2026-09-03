@@ -33,7 +33,7 @@ export default function Donate() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
                             { icon: <CreditCard size={32} />, title: 'Bank Transfer', desc: 'Transfer directly to our foundation account.', details: [{ label: 'Bank', value: 'First Bank' }, { label: 'Account', value: '0123456789' }, { label: 'Name', value: 'FirmLove Foundation' }] },
-                            { icon: <Wallet size={32} />, title: 'Mobile Payment', desc: 'Send via mobile money or digital wallet.', details: [{ label: 'Phone', value: '+233 55 285 9130' }, { label: 'Platform', value: 'Any mobile money' }] },
+                            { icon: <Wallet size={32} />, title: 'Mobile Payment', desc: 'Send via mobile money or digital wallet.', details: [{ label: 'Phone', value: '+233 55 287 9130' }, { label: 'Platform', value: 'Any mobile money' }] },
                             { icon: <Building size={32} />, title: 'In-Kind Donations', desc: 'Donate supplies, equipment, or services.', details: [{ label: '', value: 'Contact us to arrange pickup or delivery of material donations.' }] },
                         ].map((card, i) => (
                             <div key={i} className="bg-white p-10 rounded-xl border border-gray-200 text-center transition-all duration-250 hover:shadow-lg hover:-translate-y-1">
