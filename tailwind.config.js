@@ -7,6 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
+        terracotta: {
+          DEFAULT: '#c99472',
+          light: '#f3e6dd', // extremely subtle for background lines
+        },
+        espresso: {
+          DEFAULT: '#3a271d',
+        },
         primary: {
           50: '#FEF2F2',
           100: '#FEE2E2',
@@ -24,6 +31,7 @@ export default {
       fontFamily: {
         heading: ['Outfit', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
+        serif: ['"Playfair Display"', 'serif'],
       },
       maxWidth: {
         container: '1200px',

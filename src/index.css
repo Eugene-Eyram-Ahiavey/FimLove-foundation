@@ -112,3 +112,17 @@
     animation-delay: 0.4s;
   }
 }
+
+@layer utilities {
+  .writing-vertical-rl {
+    writing-mode: vertical-rl;
+  }
+  
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}

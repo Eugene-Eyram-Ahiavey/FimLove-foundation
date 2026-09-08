@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react'
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react'
+import firmloveLogo from "../assets/images/firmlove-dark.png";
 
 export default function Footer() {
     return (
@@ -9,12 +10,7 @@ export default function Footer() {
                     {/* About */}
                     <div>
                         <div className="flex items-center gap-2 mb-4">
-                            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
-                                <Heart size={20} fill="currentColor" />
-                            </div>
-                            <span className="font-heading text-2xl font-extrabold text-white">
-                                Firm<span className="text-primary">Love</span>
-                            </span>
+                            <img src={firmloveLogo}/>
                         </div>
                         <p className="text-gray-400 text-sm leading-relaxed mb-6">
                             FirmLove Foundation is dedicated to creating lasting positive change
