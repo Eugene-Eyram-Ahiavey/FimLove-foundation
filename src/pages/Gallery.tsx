@@ -17,7 +17,7 @@ export default function Gallery() {
         <>
             <Helmet>
                 <title>Gallery — FirmLove Foundation</title>
-                <meta name="description" content="Browse photos from FirmLove Foundation's events, donation drives, and community outreach programs." />
+                <meta name="description" content="Browse photos from FirmLove Foundation's events, donation drives, and community outreach programs."/>
             </Helmet>
 
             <section className="page-hero bg-[url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1600&q=80')] bg-cover bg-center">
