@@ -1,44 +1,51 @@
 import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react'
+import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from 'lucide-react'
 import firmloveLogo from "../assets/images/firmlove-dark.png";
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-900 text-gray-300 pt-16 pb-8">
-            <div className="max-w-container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-gray-800">
-                    {/* About */}
-                    <div>
-                        <div className="flex items-center gap-2 mb-4">
-                            <img src={firmloveLogo}/>
-                        </div>
-                        <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                            FirmLove Foundation is dedicated to creating lasting positive change
-                            in communities through education, health, and sustainable development programs.
+        <footer className="bg-[#F4EFE6] text-[#15131A] pt-20 pb-10 rounded-t-[3rem] mt-[-2rem] relative z-20 font-sans">
+            <div className="max-w-[1300px] mx-auto px-6 md:px-12">
+                
+                {/* Logo Top */}
+                <div className="mb-16">
+                    <img src={firmloveLogo} alt="FirmLove Foundation" className="h-10 opacity-90" />
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 pb-20 border-b border-black/10">
+                    
+                    {/* Column 1: Core Values & Newsletter */}
+                    <div className="lg:col-span-6 pr-0 lg:pr-20">
+                        <h4 className="text-[#15131A] text-xl font-semibold tracking-wide mb-6">Core Values</h4>
+                        <p className="text-gray-600 text-[1.05rem] leading-[1.8] mb-12 max-w-md">
+                            At FirmLove, we prioritize compassion, integrity, and inclusivity. These values guide our actions as we work tirelessly to bridge the gap between those in need and those willing to help.
                         </p>
-                        <div className="flex gap-3">
-                            {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (
-                                <a key={i} href="#" aria-label={Icon.displayName} className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-200">
-                                    <Icon size={18} />
-                                </a>
-                            ))}
-                        </div>
+
+                        <h4 className="text-[#15131A] text-xl font-semibold tracking-wide mb-6">Sign up for our newsletter</h4>
+                        <form className="flex flex-col sm:flex-row gap-4" onSubmit={e => e.preventDefault()}>
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                className="flex-1 px-6 py-4 bg-transparent border border-black/10 rounded-full text-[#15131A] placeholder:text-gray-500 focus:outline-none focus:border-[#c99472] transition-colors"
+                            />
+                            <button type="submit" className="px-8 py-4 rounded-full font-semibold text-white bg-[#c99472] hover:bg-[#b07c5b] transition-colors duration-300 whitespace-nowrap">
+                                Subscribe
+                            </button>
+                        </form>
                     </div>
 
-                    {/* Quick Links */}
-                    <div>
-                        <h4 className="text-white font-heading font-semibold text-lg mb-5">Quick Links</h4>
-                        <ul className="space-y-3">
+                    {/* Column 2: Useful Links */}
+                    <div className="lg:col-span-3">
+                        <h4 className="text-[#15131A] text-xl font-semibold tracking-wide mb-6">Useful links</h4>
+                        <ul className="space-y-4">
                             {[
-                                { to: '/about', label: 'About Us' },
-                                { to: '/programs', label: 'Our Programs' },
-                                { to: '/news', label: 'Latest News' },
-                                { to: '/gallery', label: 'Gallery' },
-                                { to: '/donate', label: 'Get Involved' },
-                                { to: '/contact', label: 'Contact' },
+                                { to: '/', label: 'Home' },
+                                { to: '/about', label: 'Our Mission' },
+                                { to: '/programs', label: 'Why Choose Us' },
+                                { to: '/news', label: 'Projects' },
                             ].map(link => (
                                 <li key={link.to}>
-                                    <Link to={link.to} className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm inline-block">
+                                    <Link to={link.to} className="text-gray-600 hover:text-[#c99472] transition-colors duration-200">
                                         {link.label}
                                     </Link>
                                 </li>
@@ -46,46 +53,36 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Contact */}
-                    <div>
-                        <h4 className="text-white font-heading font-semibold text-lg mb-5">Contact Us</h4>
-                        <ul className="space-y-4">
-                            {[
-                                { icon: <MapPin size={16} />, text: 'Gbawe, Accra, Ghana' },
-                                { icon: <Phone size={16} />, text: '+233 55 287 9130' },
-                                { icon: <Mail size={16} />, text: 'firmlovefoundation@gmail.com' },
-                            ].map((item, i) => (
-                                <li key={i} className="flex items-start gap-3 text-sm text-gray-400">
-                                    <span className="text-primary mt-0.5 shrink-0">{item.icon}</span>
-                                    <span>{item.text}</span>
-                                </li>
-                            ))}
+                    {/* Column 3: Our Contacts & Socials */}
+                    <div className="lg:col-span-3">
+                        <h4 className="text-[#15131A] text-xl font-semibold tracking-wide mb-6">Our contacts</h4>
+                        <ul className="space-y-6 mb-10">
+                            <li className="flex items-start gap-4 text-gray-600">
+                                <Mail size={20} className="mt-0.5 shrink-0 text-[#c99472]" />
+                                <span>firmlovefoundation@gmail.com</span>
+                            </li>
+                            <li className="flex items-start gap-4 text-gray-600">
+                                <Phone size={20} className="mt-0.5 shrink-0 text-[#c99472]" />
+                                <span>+233 55 287 9130</span>
+                            </li>
+                            <li className="flex items-start gap-4 text-gray-600">
+                                <MapPin size={20} className="mt-0.5 shrink-0 text-[#c99472]" />
+                                <span>Gbawe, Accra, Ghana</span>
+                            </li>
                         </ul>
-                    </div>
 
-                    {/* Newsletter */}
-                    <div>
-                        <h4 className="text-white font-heading font-semibold text-lg mb-5">Stay Updated</h4>
-                        <p className="text-gray-400 text-sm mb-4">Subscribe to our newsletter for the latest updates on our impact.</p>
-                        <form className="flex gap-2" onSubmit={e => e.preventDefault()}>
-                            <input
-                                type="email"
-                                placeholder="Your email address"
-                                className="flex-1 px-4 py-2.5 bg-gray-800 border border-gray-700 rounded-full text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-primary transition-colors"
-                            />
-                            <button type="submit" className="inline-flex items-center justify-center px-5 py-2 rounded-full font-semibold text-sm bg-primary text-white hover:bg-primary-700 transition-all duration-250">
-                                Subscribe
-                            </button>
-                        </form>
+                        <div className="flex gap-4">
+                            {[Facebook, Instagram, Twitter].map((Icon, i) => (
+                                <a key={i} href="#" className="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center text-gray-600 hover:text-[#c99472] hover:border-[#c99472] hover:bg-white transition-all duration-300">
+                                    <Icon size={18} />
+                                </a>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8">
-                    <p className="text-gray-500 text-sm">&copy; {new Date().getFullYear()} FirmLove Foundation. All rights reserved.</p>
-                    <div className="flex gap-6">
-                        <a href="#" className="text-gray-500 hover:text-gray-300 text-sm transition-colors">Privacy Policy</a>
-                        <a href="#" className="text-gray-500 hover:text-gray-300 text-sm transition-colors">Terms of Service</a>
-                    </div>
+                <div className="pt-8 text-center text-gray-500 text-sm">
+                    <p>&copy; {new Date().getFullYear()} FirmLove Foundation. All rights reserved.</p>
                 </div>
             </div>
         </footer>
