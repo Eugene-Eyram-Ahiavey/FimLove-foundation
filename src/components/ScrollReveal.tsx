@@ -76,14 +76,14 @@ export default function ScrollReveal() {
         <section ref={containerRef} className="h-[250vh] bg-[#FDFBF7] relative">
             <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden px-6 md:px-12">
                 
-                <div className="text-center mb-8">
-                    <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold tracking-widest uppercase bg-[#173330]/10 text-[#173330]">
-                        Our Story
+                <div className="text-center mb-10 flex justify-center">
+                    <span className="inline-block px-6 py-2 rounded-full text-[0.85rem] font-bold tracking-[0.15em] uppercase bg-[#c99472] text-white -rotate-3 shadow-md transform">
+                        The Road Ahead
                     </span>
                 </div>
 
                 {/* Narrow max width allows natural paragraph wrapping. Orenda uses a serif font for this body */}
-                <div className="max-w-[900px] mx-auto text-center font-serif text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] leading-[1.6] md:leading-[1.8] text-[#15131A]">
+                <div className="max-w-[750px] mx-auto text-center font-serif text-[1.4rem] md:text-[1.75rem] lg:text-[2.1rem] leading-[1.8] md:leading-[2] lg:leading-[2.2] text-[#15131A]">
                     {content.map((item, i) => {
                         const currentIdx = animatableIndex++
                         const start = currentIdx * step
@@ -109,7 +109,7 @@ function Word({ children, progress, range }: { children: string, progress: Motio
     const opacity = useTransform(progress, range, [0.15, 1])
     
     return (
-        <span className="inline-block mr-[0.2em] mt-[0.1em]">
+        <span className="inline-block mr-[0.25em]">
             <motion.span style={{ opacity }} className="text-[#15131A]">
                 {children}
             </motion.span>
@@ -118,17 +118,16 @@ function Word({ children, progress, range }: { children: string, progress: Motio
 }
 
 function ImagePill({ src, progress, range }: { src: string, progress: MotionValue<number>, range: [number, number] }) {
-    // The pill expands from 0 width to 2.5em width as it becomes its "turn"
-    const width = useTransform(progress, range, ["0em", "2.5em"])
+    // Make the pill wider and taller to match the screenshot's overlap
+    const width = useTransform(progress, range, ["0em", "3em"])
     const opacity = useTransform(progress, range, [0, 1])
-    // The gap around the image is reduced to match Orenda's tight inline look
-    const margin = useTransform(progress, range, ["0em", "0.15em"])
+    const margin = useTransform(progress, range, ["0em", "0.2em"])
 
     return (
-        <span className="inline-block align-middle overflow-hidden h-[1.2em] rounded-2xl mt-[-0.1em]">
+        <span className="inline-block align-middle overflow-hidden h-[1.6em] rounded-2xl mx-1" style={{ verticalAlign: '-0.3em' }}>
             <motion.span 
                 style={{ width, opacity, marginRight: margin, marginLeft: margin }}
-                className="block h-full relative origin-left"
+                className="block h-full relative origin-left shadow-md"
             >
                 <img src={src} alt="inline" className="absolute inset-0 w-full h-full object-cover" />
             </motion.span>
