@@ -29,7 +29,7 @@ export default {
         },
       },
       fontFamily: {
-        heading: ['Outfit', 'sans-serif'],
+        heading: ['Nunito', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
         serif: ['"Playfair Display"', 'serif'],
       },
