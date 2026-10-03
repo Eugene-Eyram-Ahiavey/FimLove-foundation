@@ -91,11 +91,11 @@ export default function ScrollReveal() {
                         const end = Math.min(1, start + (step * 2)) 
 
                         if (item.type === 'text') {
-                            return <Word key={i} progress={scrollYProgress} range={[start, end]}>{item.value}</Word>
+                            return <Word key={i} progress={scrollYProgress} range={[start, end]}>{item.value as string}</Word>
                         }
 
                         if (item.type === 'image') {
-                            return <ImagePill key={i} progress={scrollYProgress} range={[start, end]} src={item.src!} />
+                            return <ImagePill key={i} progress={scrollYProgress} range={[start, end]} src={item.src!} /> 
                         }
                     })}
                 </div>

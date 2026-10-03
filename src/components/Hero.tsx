@@ -22,14 +22,14 @@ export default function Hero() {
         };
     }, []);
 
-    const cardTransition = {
+    const cardTransition: any = {
         type: "spring",
         stiffness: 45,
         damping: 15,
         delay: 1.2 
     };
 
-    const textTransition = {
+    const textTransition: any = {
         duration: 0.8,
         ease: "easeOut",
         delay: 1.8 
