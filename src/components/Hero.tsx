@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { HeartHandshake } from 'lucide-react';
 
 import img1 from '../assets/images/firmlove-images/widows-1.jpg'; 
-import img2 from '../assets/images/firmlove-images/royalseed17.jpg'; 
-import img3 from '../assets/images/firmlove-images/royalseed6.jpg';  
+import img2 from '../assets/images/firmlove-images/roayalseed19.jpg'; 
+import img3 from '../assets/images/firmlove-images/royalseed20.jpg';  
 import img4 from '../assets/images/firmlove-images/korlebu-1.jpg';
 import img5 from '../assets/images/firmlove-images/Ada3.jpg';
 import img6 from '../assets/images/firmlove-images/group1.jpg';
@@ -114,7 +115,7 @@ export default function Hero() {
                         </p>
                         <div className="mt-6">
                             <button className="bg-[#594236] hover:bg-[#4a362c] text-white px-8 py-3.5 rounded-full font-medium tracking-wide transition-colors shadow-lg flex items-center gap-3">
-                                Donate now <span className="text-xl leading-none">&rarr;</span>
+                                Donate now <HeartHandshake size={18} />
                             </button>
                         </div>
                     </motion.div>
@@ -231,7 +232,7 @@ export default function Hero() {
                             </p>
                             <div className="mt-8">
                                 <button className="bg-[#594236] hover:bg-[#4a362c] text-white px-8 py-3.5 rounded-full font-medium tracking-wide transition-colors shadow-lg flex items-center gap-3">
-                                    Donate now <span className="text-xl leading-none">&rarr;</span>
+                                    Donate now <HeartHandshake size={18} />
                                 </button>
                             </div>
                         </motion.div>

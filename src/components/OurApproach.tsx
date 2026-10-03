@@ -2,9 +2,9 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 // Images
-import imgEdu from '../assets/images/firmlove-images/anglican-school.jpg';
+import imgEdu from '../assets/images/firmlove-images/allsaints1.jpg';
 import imgMedical from '../assets/images/firmlove-images/korlebu3.jpg';
-import imgCommunity from '../assets/images/firmlove-images/royalseed5.jpg';
+import imgCommunity from '../assets/images/firmlove-images/royalseed-2.jpg';
 import imgWidows from '../assets/images/firmlove-images/widows-1.jpg';
 
 // Animated Icons (Infinitely Looping as requested)

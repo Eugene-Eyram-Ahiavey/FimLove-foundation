@@ -1,8 +1,8 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion'
 import img1 from '../assets/images/firmlove-images/Ada1.jpg'
-import img2 from '../assets/images/firmlove-images/royalseed14.jpg'
-import img3 from '../assets/images/firmlove-images/anglican-school.jpg'
+import img2 from '../assets/images/firmlove-images/royalseed-1.jpg'
+import img3 from '../assets/images/firmlove-images/allsaints1.jpg'
 
 const content = [
   { type: 'text', value: "The" },

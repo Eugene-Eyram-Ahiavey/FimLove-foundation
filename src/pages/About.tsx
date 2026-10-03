@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { HandHeart, Heart, Quote } from 'lucide-react'
+import { HandHeart, Heart, HeartHandshake, Quote } from 'lucide-react'
 import { motion, AnimatePresence, useScroll, useTransform, MotionValue } from 'framer-motion'
 import founderImage from "../assets/images/Dr-Hafisah.jpg"
 import heroImage from "../assets/images/firmlove-images/group-5.jpg"
 import journeyImage from "../assets/images/firmlove-images/royalseed18.jpg"
 import img2 from "../assets/images/firmlove-images/Ada1.jpg"
-import img3 from "../assets/images/firmlove-images/anglican-school.jpg"
+import img3 from "../assets/images/firmlove-images/allsaints1.jpg"
 import img4 from "../assets/images/firmlove-images/group6.jpg"
-import img5 from "../assets/images/firmlove-images/royalseed14.jpg"
+import img5 from "../assets/images/firmlove-images/royalseed-1.jpg"
 import img6 from "../assets/images/firmlove-images/widows-1.jpg"
 import img7 from "../assets/images/firmlove-images/korlebu3.jpg"
 
@@ -70,7 +70,7 @@ export default function About() {
                                 transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                             >
                                 <a href="/donate" className="bg-[#594236] hover:bg-[#4a362c] text-white px-8 py-3.5 rounded-full font-medium tracking-wide transition-colors shadow-lg inline-flex items-center gap-3">
-                                    Donate Now <Heart size={16} className="fill-current" />
+                                    Donate Now <HeartHandshake size={18} />
                                 </a>
                             </motion.div>
                         </div>
@@ -174,7 +174,7 @@ export default function About() {
                         </p>
                         <div>
                             <a href="/donate" className="bg-[#3a271d] hover:bg-[#2c1d15] text-white px-8 py-4 rounded-full font-medium tracking-wide transition-colors inline-flex items-center gap-3">
-                                Join Our Mission <Heart size={18} className="fill-current" />
+                                Join Our Mission <HeartHandshake size={18} />
                             </a>
                         </div>
                     </motion.div>
@@ -369,7 +369,7 @@ function OrendaScrollEffect() {
     const coords1 = mapCoords(-260, -220, -120, -180)
     
     // Desktop: Top-Center: x: 0, y: -260 | Mobile: x: 0, y: -220
-    const coords2 = mapCoords(0, -260, 0, -220)
+    const coords2 = mapCoords(0, -320, 0, -220)
     
     // Desktop: Top-Right: x: 260, y: -220 | Mobile: x: 120, y: -180
     const coords3 = mapCoords(260, -220, 120, -180)
@@ -400,7 +400,7 @@ function OrendaScrollEffect() {
                 {/* Text (Center) - High contrast, perfectly centered */}
                 <motion.div 
                     style={{ opacity: textOpacity, y: textY }}
-                    className="absolute inset-0 m-auto z-[100] flex flex-col items-center justify-center text-center px-6 max-w-2xl pointer-events-none"
+                    className="absolute inset-0 m-auto z-[100] flex flex-col items-center justify-center text-center px-6 max-w-2xl pointer-events-none md:pb-6"
                 >
                     <h2 className="text-[2.2rem] md:text-[3.8rem] font-medium text-[#111827] leading-[1.1] tracking-tight mb-5 font-serif">
                         A Family United<br className="hidden md:block" /> to Create Change
@@ -411,7 +411,7 @@ function OrendaScrollEffect() {
                     <div className="pointer-events-auto">
                         {/* Elegant dark espresso button */}
                         <a href="/donate" className="bg-[#3a271d] hover:bg-[#2a1b13] text-white px-8 py-3.5 rounded-full font-light tracking-wide transition-colors inline-flex items-center gap-3 text-[15px]">
-                            Join us <span className="text-[#c99472] font-serif italic text-lg leading-none">&rarr;</span>
+                            Join us <HeartHandshake size={18} className="text-[#c99472]" />
                         </a>
                     </div>
                 </motion.div>

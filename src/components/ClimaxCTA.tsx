@@ -1,4 +1,4 @@
-import { Heart } from 'lucide-react'
+import { HeartHandshake } from 'lucide-react'
 import imgGroup from '../assets/images/firmlove-images/group3.jpg'
 
 export default function ClimaxCTA() {
@@ -41,7 +41,7 @@ export default function ClimaxCTA() {
                                 href="/donate" 
                                 className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wide whitespace-nowrap bg-[#c99472] text-white hover:bg-[#b88361] transition-colors duration-300 shadow-lg"
                             >
-                                Donate Now <Heart size={16} className="fill-current" />
+                                Donate Now <HeartHandshake size={18} />
                             </a>
                         </div>
                     </div>

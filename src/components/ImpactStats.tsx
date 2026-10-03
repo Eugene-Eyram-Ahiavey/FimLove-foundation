@@ -2,8 +2,8 @@ import { useEffect, useState, useRef } from 'react';
 import { motion, useInView, animate } from 'framer-motion';
 
 // FirmLove Photos for each card
-import orphansImg from '../assets/images/firmlove-images/royalseed5.jpg';
-import educationImg from '../assets/images/firmlove-images/anglican-school.jpg';
+import orphansImg from '../assets/images/firmlove-images/royalseed-2.jpg';
+import educationImg from '../assets/images/firmlove-images/allsaints1.jpg';
 import inmatesImg from '../assets/images/firmlove-images/james-camp-prison1.jpg';
 import medicalImg from '../assets/images/firmlove-images/korlebu3.jpg';
 
