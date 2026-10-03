@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Eye, HandHeart, Heart, Quote } from 'lucide-react'
+import { HandHeart, Heart, Quote } from 'lucide-react'
 import { motion, AnimatePresence, useScroll, useTransform, MotionValue } from 'framer-motion'
 import founderImage from "../assets/images/Dr-Hafisah.jpg"
 import heroImage from "../assets/images/firmlove-images/group-5.jpg"
@@ -345,11 +345,11 @@ function OrendaScrollEffect() {
     const end = 0.4
 
     // Text Fade In (happens as images move out) - finish earlier
-    const textOpacity = useTransform(scrollYProgress, [start + 0.15, end - 0.05], [0, 1])
-    const textY = useTransform(scrollYProgress, [start + 0.15, end - 0.05], [30, 0])
+    const textOpacity = useTransform(scrollYProgress, [0, start + 0.15, end - 0.05, 1], [0, 0, 1, 1])
+    const textY = useTransform(scrollYProgress, [0, start + 0.15, end - 0.05, 1], [30, 30, 0, 0])
 
     // Scale for all images EXCPET the front-most one. This is the secret to the perfect stack.
-    const bgScale = useTransform(scrollYProgress, [start, start + 0.1], [0.4, 1])
+    const bgScale = useTransform(scrollYProgress, [0, start, start + 0.1, 1], [0.4, 0.4, 1, 1])
     
     // Front-most image scale (Bottom-Center). It stays at 1.
     const frontScale = useTransform(scrollYProgress, [0, 1], [1, 1]) // constant
@@ -360,8 +360,8 @@ function OrendaScrollEffect() {
         const y = isMobile ? mobileY : desktopY
         // Start all at exactly 0,0
         return {
-            x: useTransform(scrollYProgress, [start, end], [0, x]),
-            y: useTransform(scrollYProgress, [start, end], [0, y])
+            x: useTransform(scrollYProgress, [0, start, end, 1], [0, 0, x, x]),
+            y: useTransform(scrollYProgress, [0, start, end, 1], [0, 0, y, y])
         }
     }
 

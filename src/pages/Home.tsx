@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Heart } from 'lucide-react'
-import { Link } from 'react-router-dom'
+
 import { defaultPosts } from '../data/siteData'
 import Hero from '../components/Hero'
 import ImpactStats from '../components/ImpactStats'
@@ -10,7 +9,7 @@ import ScrollReveal from '../components/ScrollReveal'
 
 
 export default function Home() {
-    const recentPosts = defaultPosts.slice(0, 3)
+
 
     return (
         <>
