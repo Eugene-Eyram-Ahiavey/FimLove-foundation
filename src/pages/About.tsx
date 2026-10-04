@@ -6,11 +6,11 @@ import founderImage from "../assets/images/Dr-Hafisah.jpg"
 import heroImage from "../assets/images/firmlove-images/group-5.jpg"
 import journeyImage from "../assets/images/firmlove-images/royalseed18.jpg"
 import img2 from "../assets/images/firmlove-images/Ada1.jpg"
-import img3 from "../assets/images/firmlove-images/allsaints1.jpg"
-import img4 from "../assets/images/firmlove-images/group6.jpg"
-import img5 from "../assets/images/firmlove-images/royalseed-1.jpg"
-import img6 from "../assets/images/firmlove-images/widows-1.jpg"
-import img7 from "../assets/images/firmlove-images/korlebu3.jpg"
+import img3 from "../assets/images/firmlove-images/allsaints8.jpg"
+import img4 from "../assets/images/firmlove-images/ada-an.jpg"
+import img5 from "../assets/images/firmlove-images/james-camp-prison1.jpg"
+import img6 from "../assets/images/firmlove-images/korlebu-6.jpg"
+import img7 from "../assets/images/firmlove-images/royalseed-2.jpg"
 
 const leftMetrics = [
     { value: "200+", label: "Orphans Supported" },

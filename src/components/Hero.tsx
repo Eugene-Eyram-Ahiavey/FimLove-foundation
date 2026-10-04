@@ -4,10 +4,10 @@ import { HeartHandshake } from 'lucide-react';
 
 import img1 from '../assets/images/firmlove-images/widows-1.jpg'; 
 import img2 from '../assets/images/firmlove-images/roayalseed19.jpg'; 
-import img3 from '../assets/images/firmlove-images/royalseed20.jpg';  
+import img3 from '../assets/images/firmlove-images/allsaints18.jpg';  
 import img4 from '../assets/images/firmlove-images/korlebu-1.jpg';
 import img5 from '../assets/images/firmlove-images/Ada3.jpg';
-import img6 from '../assets/images/firmlove-images/group1.jpg';
+import img6 from '../assets/images/firmlove-images/allsaints14.jpg';
 
 export default function Hero() {
     // Cinematic Intro Lock
