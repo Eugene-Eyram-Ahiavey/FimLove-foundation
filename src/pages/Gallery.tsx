@@ -37,7 +37,6 @@ import imgSaints19 from '../assets/images/firmlove-images/allsaints19.jpg'
 import imgKorle1 from '../assets/images/firmlove-images/korlebu-1.jpg'
 import imgKorle2 from '../assets/images/firmlove-images/korlebu-2.jpg'
 import imgKorle3 from '../assets/images/firmlove-images/korlebu3.jpg'
-import imgKorle3b from '../assets/images/firmlove-images/korlebu-3.jpg'
 import imgKorle5 from '../assets/images/firmlove-images/korlebu-5.jpg'
 import imgKorle6 from '../assets/images/firmlove-images/korlebu-6.jpg'
 
@@ -49,20 +48,10 @@ import imgPuteAda from '../assets/images/firmlove-images/pute-ada.jpg'
 
 // ── James Camp Prison ──
 import imgPrison1 from '../assets/images/firmlove-images/james-camp-prison1.jpg'
-import imgPrison2 from '../assets/images/firmlove-images/james-camp-prsoin2.jpg'
-import imgPrison3 from '../assets/images/firmlove-images/james-camp-prison3.jpg'
 
 // ── Widows Outreach ──
 import imgWidows1 from '../assets/images/firmlove-images/widows-1.jpg'
 import imgWidows2 from '../assets/images/firmlove-images/widows-2.jpg'
-
-// ── Group / Team ──
-import imgGroup1 from '../assets/images/firmlove-images/group1.jpg'
-import imgGroup2 from '../assets/images/firmlove-images/group2.jpg'
-import imgGroup3 from '../assets/images/firmlove-images/group3.jpg'
-import imgGroup4 from '../assets/images/firmlove-images/group4.jpg'
-import imgGroup5 from '../assets/images/firmlove-images/group-5.jpg'
-import imgGroup6 from '../assets/images/firmlove-images/group6.jpg'
 
 
 // ───────────────────────────── Types & Data ─────────────────────────────

@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async'
 
-import { defaultPosts } from '../data/siteData'
 import Hero from '../components/Hero'
 import ImpactStats from '../components/ImpactStats'
 import OurApproach from '../components/OurApproach'

@@ -23,28 +23,19 @@ export default function Hero() {
         };
     }, []);
 
-    const cardTransition: any = {
-        type: "spring",
+    const cardTransition = {
+        type: "spring" as const,
         stiffness: 45,
         damping: 15,
         delay: 1.2 
     };
 
-    const textTransition: any = {
+    const textTransition = {
         duration: 0.8,
-        ease: "easeOut",
+        ease: "easeOut" as const,
         delay: 1.8 
     };
 
-    // Shared image data for both layouts
-    const images = [
-        { src: img1, alt: "Community outreach" },
-        { src: img2, alt: "Education" },
-        { src: img3, alt: "Partnerships" },
-        { src: img4, alt: "Pute Village" },
-        { src: img5, alt: "Children smiling" },
-        { src: img6, alt: "Community" },
-    ];
 
     return (
         <div className="bg-white p-3 md:p-5 lg:p-6">
