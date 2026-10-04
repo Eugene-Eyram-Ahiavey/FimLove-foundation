@@ -1,4 +1,5 @@
 import { HeartHandshake } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import imgGroup from '../assets/images/firmlove-images/group3.jpg'
 
 export default function ClimaxCTA() {
@@ -31,18 +32,18 @@ export default function ClimaxCTA() {
                         </p>
                         
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <a 
-                                href="/volunteer" 
+                            <Link 
+                                to="/contact" 
                                 className="inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wide whitespace-nowrap bg-white text-gray-900 hover:bg-gray-200 transition-colors duration-300 shadow-lg"
                             >
                                 Become a volunteer
-                            </a>
-                            <a 
-                                href="/donate" 
+                            </Link>
+                            <Link 
+                                to="/donate" 
                                 className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wide whitespace-nowrap bg-[#c99472] text-white hover:bg-[#b88361] transition-colors duration-300 shadow-lg"
                             >
                                 Donate Now <HeartHandshake size={18} />
-                            </a>
+                            </Link>
                         </div>
                     </div>
 

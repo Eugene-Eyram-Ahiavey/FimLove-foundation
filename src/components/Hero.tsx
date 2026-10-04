@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { HeartHandshake } from 'lucide-react';
 
 import img1 from '../assets/images/firmlove-images/widows-1.jpg'; 
@@ -105,9 +106,9 @@ export default function Hero() {
                             To restore dignity to the marginalized by providing essential humanitarian aid and compassionate care, while empowering the less privileged through transformative educational opportunities.
                         </p>
                         <div className="mt-6">
-                            <button className="bg-[#594236] hover:bg-[#4a362c] text-white px-8 py-3.5 rounded-full font-medium tracking-wide transition-colors shadow-lg flex items-center gap-3">
+                            <Link to="/donate" className="bg-[#594236] hover:bg-[#4a362c] text-white px-8 py-3.5 rounded-full font-medium tracking-wide transition-colors shadow-lg flex items-center justify-center gap-3 w-max">
                                 Donate now <HeartHandshake size={18} />
-                            </button>
+                            </Link>
                         </div>
                     </motion.div>
 
@@ -222,9 +223,9 @@ export default function Hero() {
                                 To restore dignity to the marginalized by providing essential humanitarian aid and compassionate care, while empowering the less privileged through transformative educational opportunities.
                             </p>
                             <div className="mt-8">
-                                <button className="bg-[#594236] hover:bg-[#4a362c] text-white px-8 py-3.5 rounded-full font-medium tracking-wide transition-colors shadow-lg flex items-center gap-3">
+                                <Link to="/donate" className="bg-[#594236] hover:bg-[#4a362c] text-white px-8 py-3.5 rounded-full font-medium tracking-wide transition-colors shadow-lg flex items-center justify-center gap-3 w-max">
                                     Donate now <HeartHandshake size={18} />
-                                </button>
+                                </Link>
                             </div>
                         </motion.div>
 

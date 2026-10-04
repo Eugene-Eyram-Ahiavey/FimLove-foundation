@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { HandHeart, Heart, HeartHandshake, Quote } from 'lucide-react'
+import { HeartHandshake, Heart, Quote, HandHeart } from 'lucide-react'
 import { motion, AnimatePresence, useScroll, useTransform, MotionValue } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import founderImage from "../assets/images/Dr-Hafisah.jpg"
 import heroImage from "../assets/images/firmlove-images/group-5.jpg"
 import journeyImage from "../assets/images/firmlove-images/royalseed18.jpg"
@@ -69,9 +70,9 @@ export default function About() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                             >
-                                <a href="/donate" className="bg-[#594236] hover:bg-[#4a362c] text-white px-8 py-3.5 rounded-full font-medium tracking-wide transition-colors shadow-lg inline-flex items-center gap-3">
+                                <Link to="/donate" className="bg-[#594236] hover:bg-[#4a362c] text-white px-8 py-3.5 rounded-full font-medium tracking-wide transition-colors shadow-lg inline-flex items-center gap-3">
                                     Donate Now <HeartHandshake size={18} />
-                                </a>
+                                </Link>
                             </motion.div>
                         </div>
 
@@ -173,9 +174,9 @@ export default function About() {
                             What began as a response to the immediate needs of the marginalized in Ghana has grown into a lifelong mission. We don't just speak about empathy; we live it, striving every day to ensure no one feels forgotten.
                         </p>
                         <div>
-                            <a href="/donate" className="bg-[#3a271d] hover:bg-[#2c1d15] text-white px-8 py-4 rounded-full font-medium tracking-wide transition-colors inline-flex items-center gap-3">
+                            <Link to="/donate" className="bg-[#3a271d] hover:bg-[#2c1d15] text-white px-8 py-4 rounded-full font-medium tracking-wide transition-colors inline-flex items-center gap-3">
                                 Join Our Mission <HeartHandshake size={18} />
-                            </a>
+                            </Link>
                         </div>
                     </motion.div>
                 </div>
@@ -410,9 +411,9 @@ function OrendaScrollEffect() {
                     </p>
                     <div className="pointer-events-auto">
                         {/* Elegant dark espresso button */}
-                        <a href="/donate" className="bg-[#3a271d] hover:bg-[#2a1b13] text-white px-8 py-3.5 rounded-full font-light tracking-wide transition-colors inline-flex items-center gap-3 text-[15px]">
+                        <Link to="/donate" className="bg-[#3a271d] hover:bg-[#2a1b13] text-white px-8 py-3.5 rounded-full font-light tracking-wide transition-colors inline-flex items-center gap-3 text-[15px]">
                             Join us <HeartHandshake size={18} className="text-[#c99472]" />
-                        </a>
+                        </Link>
                     </div>
                 </motion.div>
 
